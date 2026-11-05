@@ -5,7 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.jdbc.autoconfigure.DataSourceAutoConfiguration;
 import org.springframework.boot.security.autoconfigure.SecurityAutoConfiguration;
 
-@SpringBootApplication (exclude = {DataSourceAutoConfiguration.class})
+@SpringBootApplication
 public class ApiManagementServiceApplication {
 
 	public static void main(String[] args) {

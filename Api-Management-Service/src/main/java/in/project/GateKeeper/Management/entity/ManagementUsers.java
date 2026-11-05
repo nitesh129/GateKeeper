@@ -14,10 +14,11 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 public class ManagementUsers {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Id
     private Long id;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "organisation_id")
+    @JoinColumn(name = "organization_id")
     private Organisation organisation;
 
     @ManyToOne(fetch = FetchType.EAGER)

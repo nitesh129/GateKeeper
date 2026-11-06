@@ -1,6 +1,6 @@
 package in.project.GateKeeper.Management.controller;
 
-import in.project.GateKeeper.Management.dto.HealthResponse;
+import in.project.GateKeeper.Management.dto.Response.HealthResponse;
 import in.project.GateKeeper.Management.service.HealthService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;

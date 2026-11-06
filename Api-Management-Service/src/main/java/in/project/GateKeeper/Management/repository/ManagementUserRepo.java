@@ -9,5 +9,10 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface ManagementUserRepo extends JpaRepository<ManagementUsers, Long> {
      Optional<ManagementUsers> findByUsername(String username);
-}
 
+     Optional<ManagementUsers> findByOrganisation_Id(Long organisationId);
+
+     boolean existsByUsernameIgnoreCase(String username);
+
+     boolean existsByUsernameIgnoreCaseAndIdNot(String username, Long id);
+}

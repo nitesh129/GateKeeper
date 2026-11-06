@@ -26,8 +26,12 @@ public class SecurityConfig {
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception{
         http
                 .csrf(csrf -> csrf.disable())
+                .sessionManagement(session -> session.sessionCreationPolicy(org.springframework.security.config.http.SessionCreationPolicy.STATELESS))
                 .authorizeHttpRequests(authorize -> authorize
                 .requestMatchers("/health","/api/auth/login").permitAll()
+                                .requestMatchers("/api/platform/**").hasRole("PLATFORM_ADMIN")
+                                .requestMatchers("/api/tenant/**").hasRole("TENANT_ADMIN")
+                                .requestMatchers("/api/gateway/**").hasRole("GATEWAY_SERVICE")
                 .anyRequest().authenticated()
                 )
                 .oauth2ResourceServer(oauth2 -> oauth2.jwt(jwt ->

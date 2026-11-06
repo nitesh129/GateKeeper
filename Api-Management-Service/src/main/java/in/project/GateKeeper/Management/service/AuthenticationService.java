@@ -1,7 +1,7 @@
 package in.project.GateKeeper.Management.service;
 
-import in.project.GateKeeper.Management.dto.LoginRequest;
-import in.project.GateKeeper.Management.dto.LoginResponse;
+import in.project.GateKeeper.Management.dto.request.LoginRequest;
+import in.project.GateKeeper.Management.dto.Response.LoginResponse;
 import in.project.GateKeeper.Management.entity.ManagementUsers;
 import in.project.GateKeeper.Management.entity.OrganisationStatus;
 import in.project.GateKeeper.Management.repository.ManagementUserRepo;
@@ -58,7 +58,7 @@ public class AuthenticationService {
        JwsHeader header = JwsHeader.with(MacAlgorithm.HS256).build();
 
         String token = jwtEncoder.encode(JwtEncoderParameters.from(header, claims.build())).getTokenValue();
-        return new LoginResponse(token, "Bearer",expirationseconds, role, organisationId);
+        return new LoginResponse(token, "Bearer", expirationseconds, role, organisationId);
     }
 
     public RuntimeException invalidCredentials() {

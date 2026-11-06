@@ -1,4 +1,4 @@
-package in.project.GateKeeper.Management.dto;
+package in.project.GateKeeper.Management.dto.Response;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

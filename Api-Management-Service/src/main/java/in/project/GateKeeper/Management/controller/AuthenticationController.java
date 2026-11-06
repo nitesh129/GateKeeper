@@ -1,7 +1,7 @@
 package in.project.GateKeeper.Management.controller;
 
-import in.project.GateKeeper.Management.dto.LoginRequest;
-import in.project.GateKeeper.Management.dto.LoginResponse;
+import in.project.GateKeeper.Management.dto.request.LoginRequest;
+import in.project.GateKeeper.Management.dto.Response.LoginResponse;
 import in.project.GateKeeper.Management.service.AuthenticationService;
 import jakarta.validation.Valid;
 import org.springframework.http.ResponseEntity;

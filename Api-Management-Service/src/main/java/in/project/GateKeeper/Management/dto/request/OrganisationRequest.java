@@ -1,4 +1,4 @@
-package in.project.GateKeeper.Management.dto.organisation;
+package in.project.GateKeeper.Management.dto.request;
 
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Pattern;

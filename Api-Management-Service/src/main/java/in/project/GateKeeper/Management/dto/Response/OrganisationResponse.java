@@ -1,4 +1,4 @@
-package in.project.GateKeeper.Management.dto.organisation;
+package in.project.GateKeeper.Management.dto.Response;
 
 import in.project.GateKeeper.Management.entity.Organisation;
 import in.project.GateKeeper.Management.entity.OrganisationStatus;
